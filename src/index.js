@@ -1,13 +1,19 @@
+// src/index.js
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-// Opcional: Se você não criou um index.css, remova esta linha ou crie o arquivo vazio
 import './App.css'; 
 import App from './App';
 
-// Cria a raiz da aplicação no elemento com id="root"
-const root = ReactDOM.createRoot(document.getElementById('root')); 
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+// Verifica se o elemento 'root' existe antes de criar o render
+const rootElement = document.getElementById('root'); 
+
+if (rootElement) {
+    const root = ReactDOM.createRoot(rootElement); 
+    root.render(
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    );
+} else {
+    console.error("Elemento 'root' não encontrado no HTML.");
+}
