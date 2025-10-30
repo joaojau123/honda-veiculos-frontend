@@ -1,11 +1,9 @@
+// src/services/api.js
 import axios from 'axios';
 
-// *** ATENÇÃO: ESSA URL DEVE SER MUDADA APÓS O DEPLOY DO BACK-END! ***
-// Para desenvolvimento local:
-const baseURL = 'https://honda-veiculos-backend.onrender.com/api/veiculos';
-    
-// Exemplo de como ficará após o deploy no Render:
-// const baseURL = 'https://honda-veiculos-backend.onrender.com/api/veiculos';
+// Se a URL do Render é: https://honda-veiculos-backend.onrender.com
+const baseURL = 'https://honda-veiculos-backend.onrender.com/api/veiculos'; 
+// ^^^^^^^^^^^^^^^^^^^^^^^ Sua URL real aqui! ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 const api = axios.create({
   baseURL: baseURL,
